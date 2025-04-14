@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>felizcumple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing" class="section">
+    <div class="container">
+      <h1>¡Feliz Cumpleaños!</h1>
+      <p>Haz clic para descubrir un regalo muy especial.</p>
+      <button id="enterBtn">Da Clic Aquí</button>
+    </div>
+  </section>
+
+  <!-- Sección de Mensajes -->
+  <section id="mensaje" class="section hidden">
+    <div class="container">
+      <h2>Un mensaje para ti</h2>
+      <!-- Aquí se puede usar un efecto de texto, por ejemplo con Typed.js -->
+      <p id="mensajeTexto">[Mensaje de cumpleaños...</p>
+      <button class="nextBtn" data-next="galeria">Ver nuestras fotos</button>
+    </div>
+  </section>
+
+  <!-- Sección de Galería de Fotos -->
+  <section id="galeria" class="section hidden">
+    <div class="container">
+      <h2>Nuestras Fotos</h2>
+      <div class="gallery">
+        <!-- Inserta aquí las fotos. Puedes usar etiquetas <img> o un carrusel -->
+        <img src="ruta/a/tu-foto1.jpg" alt="Foto 1">
+        <img src="ruta/a/tu-foto2.jpg" alt="Foto 2">
+        <!-- Más fotos -->
+      </div>
+      <button class="nextBtn" data-next="sorpresa">Sorpresa Final</button>
+    </div>
+  </section>
+
+  <!-- Sección de Sorpresa Animada -->
+  <section id="sorpresa" class="section hidden">
+    <div class="container">
+      <h2>¡Sorpresa!</h2>
+      <p>¡Esperamos que disfrutes este día tan especial!</p>
+      <canvas id="confettiCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- Audio de fondo (Inicialmente en pausa) -->
+  <audio id="bgMusic" loop>
+    <source src="" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
