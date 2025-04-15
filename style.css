@@ -1,0 +1,86 @@
+/* Reset básico y estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffe0f0, #fff5b7, #e8d0ff);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Secciones y contenedores */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos y textos */
+h1, h2 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #d63384;
+}
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Botones mejorados y más grandes */
+button {
+  font-size: 1.4em;
+  padding: 18px 36px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff69b4, #ffcc70, #8a2be2);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Galería de fotos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
