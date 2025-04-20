@@ -11,51 +11,209 @@
   <section id="landing" class="section">
     <div class="container">
       <h1>¡Feliz Cumpleaños!</h1>
-      <p>Haz clic para descubrir un regalo muy especial.</p>
+      <p>Esta mini pagina es pa decirte feliz cumpleaños de una forma un poco distinta jeje.</p>
       <button id="enterBtn">Da Clic Aquí</button>
     </div>
   </section>
 
-  <!-- Sección de Mensajes -->
-  <section id="mensaje" class="section hidden">
-    <div class="container">
-      <h2>Un mensaje para ti</h2>
-      <!-- Aquí se puede usar un efecto de texto, por ejemplo con Typed.js -->
-      <p id="mensajeTexto">[Mensaje de cumpleaños...]</p>
-      <button class="nextBtn" data-next="galeria">Ver nuestras fotos</button>
-    </div>
+    <!-- Sección mensajes -->
+    <section id="mensaje" class="section hidden">
+      <div class="container mensaje-container">
+          <div class="corner-buttons">
+              <button class="cornerBtn nextBtn" data-next="galeria">Siguiente</button>
+          </div>
+  
+          <h2>Te amoooo</h2>
+          <p id="mensajeTexto">Eres la niña más perfecta de todo el universo. Me encantas demasiado y estoy muy agradecido de que seas mi novia. Hoy es un día súper especial, ya que puedo celebrar que cumples un año más de vida, y espero poder compartir no solo este, sino toda la vida junto a ti. Eres una persona increíble y tu vida vale todo en este mundo. Feliz cumpleaños, mi cielo. Disfrútalo.</p>
+  
+          <button onclick="mostrarDarcyBoton()" style="background-color: #ff69b4; color: white; padding: 10px 20px; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin-top: 20px;">
+              jsasjasj
+          </button>
+  
+          <div id="darcy" style="display: none; margin-top: 30px; text-align: center;">
+              <p style="font-style: italic; font-size: 18px; color: #333;">
+                  Sabias que en realidad yo fui el que dijo esto: <br>
+                  <span style="font-weight: bold;">"Me ha hechizado en cuerpo y alma y la amo, la amo, la amo. No quiero estar sin usted otro día."</span>
+              </p>
+              <img src="Imagenes/darcy.png" alt="Mr. Darcy" style="max-width: 200px; border-radius: 10px; margin-top: 15px;">
+          </div>
+  
+          <div style="text-align: center; margin-top: 20px;">
+              <button id="botonMeGustas" onclick="mostrarSorpresaFinal()" style="background-color: #a020f0; color: white; padding: 10px 20px; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin: 20px auto; display: none;">
+                  Te la dedico vv
+              </button>
+          </div>
+  
+          <div id="sorpresaFinal" style="display: none; margin-top: 30px; text-align: center;">
+            <div style="margin-bottom: 20px; text-align: center; white-space: pre-line;">
+                <p style="font-size: 16px; color: #555; font-weight: bold;">Super lyrics:</p>
+                <p style="font-size: 14px; color: #777;">
+                    Tus ojos son bellos y\n
+                    Redondos como la\n
+                    Luna llena\n
+                    Y al verlos le digo a mis\n
+                    Adentros que áspera esa\n
+                    Nena\n
+                    Quisiera bajo él\n
+                    Azul del cielo\n
+                    Tomarte de la\n
+                    Mano\n
+                    Y juntos pasar la noche\n
+                    Entera parchando bien\n
+                    Bacano\n
+                    Porque me gustas me\n
+                    Gustas un resto porque eres\n
+                    Tu la razón de mí traga\n
+                    Yo solo quiero a lo bien\n
+                    Demostrarte que yo no\n
+                    Soy tan inútil ni caspa\n
+                    Porque me gustas\n
+                    Me gustas un resto\n
+                    Y solo quiero tenerte en mis brazos\n
+                    Porque es muy claro con solo mirarte\n
+                    Que tú te aguantas un buen taponazo\n
+                    Tú tienes lo que mi ser anhela\n
+                    Requiere y necesita\n
+                    Un alma que no revira tanto\n
+                    Y un cuerpo bien chimbita\n
+                    Por eso hoy vengo\n
+                    A declararme\n
+                    Y que sepa el barrio entero\n
+                    Que siento por ti\n
+                    Un amor de macho\n
+                    Bien power y severo
+                </p>
+            </div>
+            <h3 style="font-size: 18px; color: #333; margin-bottom: 10px;">Tú y yo</h3>
+            <img src="Imagenes/German.png" alt="Tu y yo" style="max-width: 200px; border-radius: 10px; margin-bottom: 25px; display: block; margin-left: auto; margin-right: auto;">
+            <audio id="audioMeGustas" controls style="width: 100%; max-width: 300px; margin-bottom: 20px;">
+                <source src="Audio/Me gustas un resto.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+      </div>
   </section>
+  
+  <script>
+      function mostrarDarcyBoton() {
+          document.getElementById("darcy").style.display = "block";
+          const botonMeGustas = document.getElementById("botonMeGustas");
+          botonMeGustas.style.display = "block";
+          // Centrar el botón directamente
+          botonMeGustas.style.margin = "20px auto";
+      }
+  
+      function mostrarSorpresaFinal() {
+          document.getElementById("sorpresaFinal").style.display = "block";
+          const audio = document.getElementById("audioMeGustas");
+          if (audio) {
+              audio.play().catch(error => console.error("Error al reproducir el audio:", error));
+          }
+      }
+  </script>
 
   <!-- Sección de Galería de Fotos -->
   <section id="galeria" class="section hidden">
-    <div class="container">
-      <h2>Nuestras Fotos</h2>
-      <div class="gallery">
-        <!-- Inserta aquí las fotos. Puedes usar etiquetas <img> o un carrusel -->
-        <img src="ruta/a/tu-foto1.jpg" alt="Foto 1">
-        <img src="ruta/a/tu-foto2.jpg" alt="Foto 2">
-        <!-- Más fotos -->
+    <div class="container galeria-container">
+        <h2>Nosotros</h2>
+
+        <div class="collage-section">
+            <h3>Quiero estar contigo para:</h3>
+            <h4>Darte más y más flores</h4>
+            <div class="image-group flores-collage">
+                <img src="Imagenes/Flor 1.jpg" alt="Foto con flores 1">
+                <img src="Imagenes/Flor 2.jpg" alt="Foto con flores 2">
+                <img src="Imagenes/Flor 3.jpg" alt="Foto con flores 3">
+            </div>
+            <p class="mini-mensaje">Que cada flor sea un recordatorio de cuanto te amo</p>
+        </div>
+
+        <div class="collage-section">
+            <h3>Quiero estar contigo para:</h3>
+            <h4>Que me cuides la carita</h4>
+            <div class="image-group mascarilla-collage">
+                <img src="Imagenes/Mascarillas.jpg" alt="Foto con mascarilla">
+            </div>
+            <p class="mini-mensaje">Y me saques todos los puntitos negros</p>
+        </div>
+
+        <div class="collage-section">
+            <h3>Quiero estar contigo para:</h3>
+            <h4>Que me acompañes y acompañarte en momentos importantes</h4>
+            <div class="image-group momento-collage">
+                <img src="Imagenes/Momento.jpg" alt="Foto de un momento importante">
+            </div>
+            <p class="mini-mensaje">Cada paso, juntitos.</p>
+        </div>
+
+        <div class="collage-section">
+            <h3>Quiero estar contigo para:</h3>
+            <h4>más momentos xd</h4>
+            <div class="image-group graciosa-collage">
+                <img src="Imagenes/Graciosa.jpg" alt="Foto graciosa">
+            </div>
+            <p class="mini-mensaje">Me haces reir mucho mi amor.</p>
+        </div>
+
+        <div class="collage-section">
+          <h3>Quiero estar contigo para:</h3>
+          <h4>Seguir viendo tus increíbles bailes</h4>
+          <div class="video-group bailes-collage">
+              <video controls width="250" height="auto">
+                  <source src="Videos/Baile 1.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+              </video>
+              <video controls width="250" height="auto">
+                  <source src="Videos/Baile 2.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+              </video>
+          </div>
+          <p class="mini-mensaje">Deberias hacerte bailarina</p>
       </div>
-      <button class="nextBtn" data-next="sorpresa">Sorpresa Final</button>
-    </div>
-  </section>
 
-  <!-- Sección de Sorpresa Animada -->
-  <section id="sorpresa" class="section hidden">
-    <div class="container">
-      <h2>¡Sorpresa!</h2>
-      <p>¡Esperamos que disfrutes este día tan especial!</p>
-      <canvas id="confettiCanvas"></canvas>
+        <div class="corner-buttons">
+            <button class="cornerBtn nextBtn" data-next="invitacion">Siguiente</button>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Audio de fondo (Inicialmente en pausa) -->
+  <!-- Sección de invitación -->
+  <section id="invitacion" class="section hidden">
+    <div class="container invitacion-container">
+        <h2>¡Sorpresa!</h2>
+        <div class="mensaje-invitacion">
+            <p style="font-size: 1.8em; color: #e91e63; font-weight: bold; margin-bottom: 15px;">
+                Hagamos un trato
+            </p>
+            <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;">
+                Te has ganado una invitación el día de hoy a las <span style="font-weight: bold;">7:00 PM</span> para que vayamos a comer juntitos al <span style="font-weight: bold;">Medellín Gourmet</span>.
+            </p>
+            <p style="font-size: 1.1em; color: #777; margin-bottom: 20px;">
+                A cambio de un piquito 😳
+            </p>
+            <p style="font-size: 1em; color: #888;">
+                Código de vestimenta: Lindo/formal 🤵
+            </p>
+        </div>
+    </div>
+</section>
+
+  <!-- Audio de fondo -->
   <audio id="bgMusic" loop>
     <source src="" type="audio/mp3">
     Tu navegador no soporta el elemento de audio.
   </audio>
 
+  <!-- Script para mostrar la frase -->
+  <script>
+    function mostrarDarcy() {
+      document.getElementById("darcy").style.display = "block";
+    }
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
 

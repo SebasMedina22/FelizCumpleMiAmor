@@ -84,3 +84,177 @@ button:hover {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+#mensaje {
+  position: relative;
+}
+
+.corner-buttons {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.cornerBtn {
+  pointer-events: auto;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #8a2be2, #ffcc70, #ff69b4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cornerBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cornerBtn.nextBtn {
+  margin-right: 40px; /* puedes probar con 20px o lo que se vea bien */
+}
+
+.galeria-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.collage-section {
+  margin-bottom: 40px;
+  text-align: center;
+  width: 80%; /* Ajusta el ancho según necesites */
+  max-width: 600px; /* Ancho máximo para el bloque */
+}
+
+.collage-section h3 {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.collage-section h4 {
+  color: #e91e63; /* Un toque de color */
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.image-group img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Suave sombra */
+}
+
+/* Estilos específicos para el collage de flores para hacerlo más creativo */
+.flores-collage {
+  justify-content: space-around; /* Espacio uniforme entre las fotos */
+}
+
+.flores-collage img:nth-child(1) {
+  transform: rotate(-5deg);
+  max-width: 130px;
+}
+
+.flores-collage img:nth-child(2) {
+  transform: rotate(3deg);
+  max-width: 160px;
+}
+
+.flores-collage img:nth-child(3) {
+  transform: rotate(-2deg);
+  max-width: 130px;
+}
+
+.mini-mensaje {
+  font-style: italic;
+  color: #777;
+  margin-top: 15px;
+}
+
+.corner-buttons {
+  margin-top: 30px;
+}
+
+.corner-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.corner-buttons button:hover {
+  background-color: #ddd;
+}
+
+.video-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  gap: 20px; /* Espacio entre los videos */
+}
+
+.video-group video {
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Suave sombra */
+  max-width: 100%; /* Para que no se desborden en contenedores pequeños */
+  height: auto;
+}
+
+/* Estilos específicos para el grupo de bailes si quieres algo particular */
+.bailes-collage {
+  /* Puedes añadir estilos específicos aquí si lo necesitas */
+}
+
+.invitacion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.mensaje-invitacion {
+  background-color: #f9f9f9; /* Un fondo suave */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05); /* Una sombra sutil */
+  margin-bottom: 20px;
+  max-width: 500px; /* Ancho máximo del mensaje */
+}
+
+.invitacion-container h2 {
+  color: #e91e63;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+/* Puedes ajustar los estilos de los párrafos si no usaste los estilos en línea */
+.mensaje-invitacion p {
+  margin-bottom: 10px;
+}
+
+
